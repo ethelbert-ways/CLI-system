@@ -1,0 +1,40 @@
+/* Graphing view */
+.v-graph .gf-layout { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 980px) { .v-graph .gf-layout { grid-template-columns: minmax(0, 1fr) 360px; } .v-graph .gf-stage { position: sticky; top: 76px; } }
+.v-graph .gf-canvaswrap { position: relative; height: clamp(320px, 58vh, 720px); border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+@media (min-width: 980px) { .v-graph .gf-canvaswrap { height: min(74vh, 720px); } }
+.v-graph canvas { display: block; touch-action: none; cursor: crosshair; outline: none; }
+.v-graph canvas:focus-visible { box-shadow: inset 0 0 0 2px var(--focus); }
+.v-graph .gf-zoom { position: absolute; top: 10px; right: 10px; display: grid; gap: 6px; }
+.v-graph .gf-zb { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); font-size: 1.15rem; font-weight: 700; cursor: pointer; box-shadow: var(--shadow); }
+.v-graph .gf-zb:hover { background: var(--surface-2); }
+.v-graph .gf-read { margin-top: 10px; padding: 10px 14px; min-height: 2.6em; font-size: .95rem; overflow-wrap: anywhere; }
+.v-graph .gf-side { display: grid; gap: 14px; }
+.v-graph .card h2 { font-size: 1.05rem; margin: 0 0 10px; }
+.v-graph .gf-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.v-graph .gf-h h2 { margin: 0; }
+.v-graph .gf-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) 36px; gap: 8px; align-items: center; margin-bottom: 6px; }
+.v-graph .gf-sw { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--c); background: var(--c); cursor: pointer; padding: 0; }
+.v-graph .gf-sw.off { background: transparent; }
+.v-graph .gf-in { width: 100%; min-height: 42px; padding: 8px 10px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1rem; }
+.v-graph .gf-x { width: 36px; height: 36px; border-radius: 8px; border: 0; background: transparent; color: var(--muted); font-size: 1.3rem; cursor: pointer; }
+.v-graph .gf-x:hover { background: var(--surface-2); color: var(--danger); }
+.v-graph .gf-err { grid-column: 2 / 4; color: var(--danger); font-size: .82rem; min-height: 0; }
+.v-graph .gf-err:empty { display: none; }
+.v-graph .gf-ex { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }
+.v-graph .gf-help { margin-top: 12px; font-size: .92rem; }
+.v-graph .gf-help summary, .v-graph .gf-set summary { cursor: pointer; font-weight: 700; }
+.v-graph .gf-help ul { padding-left: 1.2em; margin: 8px 0 0; }
+.v-graph code { background: var(--surface-2); padding: 1px 6px; border-radius: 6px; font-size: .88em; }
+.v-graph .gf-sl { display: grid; grid-template-columns: 3em minmax(0, 1fr) 5.5em; gap: 10px; align-items: center; margin-bottom: 6px; font-weight: 700; }
+.v-graph .gf-sl input[type="range"] { width: 100%; accent-color: var(--accent); min-height: 32px; }
+.v-graph .gf-sn { min-height: 36px; padding: 4px 8px; text-align: center; }
+.v-graph .gf-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.v-graph .gf-chips .chip i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.v-graph .gf-setgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0; }
+.v-graph .gf-setgrid .sv-lab { display: grid; gap: 4px; font-weight: 700; font-size: .82rem; color: var(--muted); }
+.v-graph .gf-setgrid input[type="text"], .v-graph .gf-setgrid select { width: 100%; min-height: 38px; padding: 6px 8px; }
+.v-graph .gf-chk { display: flex; align-items: center; gap: 8px; font-weight: 600; grid-column: 1 / -1; }
+.v-graph .gf-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.v-graph .muted { color: var(--muted); }
+.v-graph .gf-chips { max-height: 240px; overflow-y: auto; }

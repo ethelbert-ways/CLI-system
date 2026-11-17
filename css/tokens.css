@@ -1,0 +1,59 @@
+/* CLI design tokens: calm, neutral, teal-accented. Light + dark. */
+:root, [data-theme="light"] {
+  --bg: #f3f6f7;
+  --surface: #ffffff;
+  --surface-2: #ecf1f3;
+  --surface-3: #e1e8ec;
+  --text: #17262e;
+  --muted: #556871;
+  --line: #d9e2e7;
+  --line-strong: #b7c5cd;
+  --accent: #1d7480;
+  --accent-ink: #ffffff;
+  --accent-soft: #dff0f2;
+  --danger: #b3364f;
+  --ok: #23805a;
+
+  --c1: #2874b4; --c1s: #dcebf8;
+  --c2: #2a8a5e; --c2s: #d9f0e5;
+  --c3: #b97a10; --c3s: #faeccf;
+  --c4: #bf4560; --c4s: #f8dbe1;
+  --c5: #6850b8; --c5s: #e5def6;
+  --c6: #1d7e8a; --c6s: #d5edf0;
+
+  --d-line: #3b4f5a;
+  --on-solid: #ffffff;
+  --shadow: 0 1px 2px rgba(20, 40, 50, .06), 0 8px 24px rgba(20, 40, 50, .06);
+  --radius: 14px;
+  --radius-sm: 9px;
+  --focus: #2874b4;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --bg: #0e171c;
+  --surface: #15232a;
+  --surface-2: #1b2d36;
+  --surface-3: #233843;
+  --text: #e4edf1;
+  --muted: #9db1bb;
+  --line: #27404b;
+  --line-strong: #3a586a;
+  --accent: #5cc3cd;
+  --accent-ink: #06242a;
+  --accent-soft: #163840;
+  --danger: #f08099;
+  --ok: #62cf9f;
+
+  --c1: #70b4f0; --c1s: #1b3652;
+  --c2: #5ccd97; --c2s: #173a2c;
+  --c3: #ebb352; --c3s: #43330f;
+  --c4: #f08aa1; --c4s: #482030;
+  --c5: #a995ee; --c5s: #2c2550;
+  --c6: #5cc3cd; --c6s: #123c42;
+
+  --d-line: #a9bcc5;
+  --on-solid: #0b1a20;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+  --focus: #70b4f0;
+  color-scheme: dark;
+}

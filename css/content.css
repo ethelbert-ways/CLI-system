@@ -1,0 +1,78 @@
+/* Diagrams + formula (tex) styling. Theme-aware through tokens.css variables. */
+.diagram { margin: 0; }
+.diagram svg.d { display: block; width: 100%; height: auto; max-width: 720px; margin: 0 auto; }
+.diagram figcaption { text-align: center; color: var(--muted); font-size: .9rem; margin-top: .5rem; }
+
+.d { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+.d .ln   { fill: none; stroke: var(--d-line); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln1  { fill: none; stroke: var(--c1); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln2  { fill: none; stroke: var(--c2); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln3  { fill: none; stroke: var(--c3); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln4  { fill: none; stroke: var(--c4); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln5  { fill: none; stroke: var(--c5); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .ln6  { fill: none; stroke: var(--c6); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.d .thin { stroke-width: 1; }
+.d .thick { stroke-width: 3.5; }
+.d .bold { stroke-width: 3.5; }
+.d .dash { stroke-dasharray: 6 5; }
+.d .grid { stroke: var(--line); stroke-width: 1; fill: none; }
+.d .axis { stroke: var(--d-line); stroke-width: 1.5; fill: none; }
+.d .nofill { fill: none; }
+.d .f0 { fill: var(--surface-2); stroke: var(--line-strong); stroke-width: 1.5; }
+.d .f1 { fill: var(--c1s); stroke: var(--c1); stroke-width: 2; }
+.d .f2 { fill: var(--c2s); stroke: var(--c2); stroke-width: 2; }
+.d .f3 { fill: var(--c3s); stroke: var(--c3); stroke-width: 2; }
+.d .f4 { fill: var(--c4s); stroke: var(--c4); stroke-width: 2; }
+.d .f5 { fill: var(--c5s); stroke: var(--c5); stroke-width: 2; }
+.d .f6 { fill: var(--c6s); stroke: var(--c6); stroke-width: 2; }
+.d .s1 { fill: var(--c1); stroke: none; } .d .s2 { fill: var(--c2); stroke: none; } .d .s3 { fill: var(--c3); stroke: none; }
+.d .s4 { fill: var(--c4); stroke: none; } .d .s5 { fill: var(--c5); stroke: none; } .d .s6 { fill: var(--c6); stroke: none; }
+.d .s0 { fill: var(--d-line); stroke: none; }
+.d .sh1 { fill: var(--c1); fill-opacity: .22; stroke: none; } .d .sh2 { fill: var(--c2); fill-opacity: .22; stroke: none; }
+.d .sh3 { fill: var(--c3); fill-opacity: .25; stroke: none; } .d .sh4 { fill: var(--c4); fill-opacity: .22; stroke: none; }
+.d .sh5 { fill: var(--c5); fill-opacity: .22; stroke: none; } .d .sh6 { fill: var(--c6); fill-opacity: .22; stroke: none; }
+.d .tx  { fill: var(--text); font-size: 14px; font-weight: 600; }
+.d .tm  { text-anchor: middle; }
+.d .te  { text-anchor: end; }
+.d .tsm { font-size: 12px; font-weight: 500; fill: var(--muted); }
+.d .tlg { font-size: 17px; font-weight: 700; }
+.d .tn  { font-weight: 400; }
+.d .ti  { font-style: italic; }
+.d .tw  { fill: var(--on-solid); }
+.d .tc1 { fill: var(--c1); } .d .tc2 { fill: var(--c2); } .d .tc3 { fill: var(--c3); }
+.d .tc4 { fill: var(--c4); } .d .tc5 { fill: var(--c5); } .d .tc6 { fill: var(--c6); }
+.d .mk  { fill: var(--d-line); } .d .mk1 { fill: var(--c1); } .d .mk2 { fill: var(--c2); } .d .mk3 { fill: var(--c3); }
+.d .mk4 { fill: var(--c4); } .d .mk5 { fill: var(--c5); } .d .mk6 { fill: var(--c6); }
+
+/* ---------- tex (formulas) ---------- */
+.tex { font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", "Times New Roman", Georgia, serif; font-size: 1.15em; line-height: 1.5; white-space: nowrap; }
+.tex i { font-style: italic; }
+.tex .rm { font-style: normal; font-family: inherit; }
+.tex .fn { font-style: normal; margin-right: .1em; }
+.tex .op { margin: 0 .24em; }
+.tex .un { margin: 0 .04em 0 .1em; }
+.tex .sp { display: inline-block; }
+.tex .sp.thin { width: .17em; } .tex .sp.med { width: .3em; } .tex .sp.neg { width: -.17em; } .tex .sp.quad { width: 1em; } .tex .sp.qquad { width: 2em; }
+.tex sup, .tex sub { font-size: .72em; line-height: 0; }
+.tex .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 .12em; line-height: 1.25; }
+.tex .frac > .num { padding: 0 .2em .05em; border-bottom: 1.5px solid currentColor; }
+.tex .frac > .den { padding: .05em .2em 0; }
+.tex .frac.nobar > .num { border-bottom: 0; }
+.tex .par { font-size: 1.9em; line-height: .6; vertical-align: middle; font-weight: 200; }
+.tex .sqrt { display: inline-flex; align-items: stretch; vertical-align: middle; white-space: nowrap; margin: 0 .05em; }
+.tex .sqrt .rsg { width: .72em; min-height: 1.2em; flex: none; overflow: visible; }
+.tex .sqrt .rc { display: inline-block; border-top: 1.5px solid currentColor; padding: .04em .12em 0 .06em; margin-left: -.02em; }
+.tex .sqrt .idx { font-size: .6em; align-self: flex-start; margin-right: -.45em; }
+.tex .supsub { display: inline-flex; flex-direction: column; vertical-align: middle; line-height: 1; margin-left: .05em; }
+.tex .supsub sup, .tex .supsub sub { line-height: 1.1; }
+.tex .acc { position: relative; display: inline-block; }
+.tex .acc.vec::before { content: "\2192"; position: absolute; top: -.62em; left: 0; right: 0; text-align: center; font-size: .65em; font-style: normal; }
+.tex .acc.hat::before { content: "^"; position: absolute; top: -.5em; left: 0; right: 0; text-align: center; font-size: .9em; font-style: normal; }
+.tex .acc.tilde::before { content: "~"; position: absolute; top: -.5em; left: 0; right: 0; text-align: center; font-size: .9em; font-style: normal; }
+.tex .acc.dot::before { content: "\00b7"; position: absolute; top: -.62em; left: 0; right: 0; text-align: center; font-weight: 700; font-style: normal; }
+.tex .acc.ddot::before { content: "\00a8"; position: absolute; top: -.5em; left: 0; right: 0; text-align: center; font-style: normal; }
+.tex .acc.bar { border-top: 1.4px solid currentColor; }
+.tex .ul { border-bottom: 1.4px solid currentColor; }
+.tex .big { font-size: 1.45em; line-height: 1; vertical-align: -.1em; margin-right: .05em; }
+.tex .mb { font-style: normal; font-weight: 700; }
+.tex .mb i { font-style: normal; }

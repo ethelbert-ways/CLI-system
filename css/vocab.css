@@ -1,0 +1,34 @@
+/* Vocabulary */
+.vocab-wotd { margin-bottom: 16px; }
+.vocab-wotd .word { font-size: 1.25rem; margin: 0 6px; }
+.vocab-wotd p { margin: 6px 0 10px; }
+.v-tools { display: grid; gap: 12px; margin-bottom: 16px; }
+.v-tools input[type="search"] { max-width: 520px; }
+.az { display: flex; flex-wrap: wrap; gap: 4px; }
+.az-b { min-width: 34px; min-height: 34px; padding: 0 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; font-weight: 700; font-size: .85rem; cursor: pointer; color: var(--text); }
+.az-b:hover:not([disabled]) { background: var(--surface-2); }
+.az-b[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.az-b[disabled] { opacity: .35; cursor: default; }
+@media (pointer: coarse) { .az-b { min-width: 40px; min-height: 40px; } }
+.v-letter { margin: 22px 0 8px; font-size: 1.3rem; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.v-group { display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1000px) { .v-group { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
+.term { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--sc); border-radius: var(--radius-sm); scroll-margin-top: 80px; }
+.term > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 11px 14px; cursor: pointer; list-style: none; }
+.term > summary::-webkit-details-marker { display: none; }
+.term > summary::before { content: "▸"; color: var(--muted); font-size: .8rem; align-self: center; transition: transform .15s; }
+.term[open] > summary::before { transform: rotate(90deg); }
+.term .t-word { font-weight: 800; font-size: 1.05rem; }
+.term .t-pron { color: var(--muted); font-style: italic; font-size: .9rem; }
+.term .t-pos { color: var(--muted); font-size: .82rem; }
+.term .badge { margin-left: auto; }
+.term .badge + .badge { margin-left: 0; }
+.term .t-body { padding: 0 16px 14px; }
+.term .t-body p { margin: 0 0 .7em; }
+.term .t-def { font-size: 1.02rem; }
+.term.flash { animation: flash 1.6s ease-out 1; }
+@keyframes flash { 0% { box-shadow: 0 0 0 4px var(--accent-soft); border-color: var(--accent); } 100% { box-shadow: none; } }
+.add-word { margin-top: 28px; }
+.add-word summary { cursor: pointer; font-weight: 700; }
+.add-word form { display: grid; gap: 12px; margin-top: 14px; max-width: 560px; }
+.chip.plain { cursor: default; }
